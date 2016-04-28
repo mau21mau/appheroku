@@ -10,10 +10,10 @@ $(function () {
     .done(function(data) {
         for (var i = 0; i < data.length; i++) {
             var li = "<li class='channel' data-idChannel='"+data[i].uuid+"'>"
-                        +"<label for='c"+data[i].uuid+"' class='menu_label'>"+data[i].channelName
+                        +"<label for='"+slugify(data[i].channelName)+data[i].uuid+"' class='menu_label'>"+data[i].channelName
                         +"<a class='call-api' href='/approachone/rest/channel/?uuid="+data[i].uuid+"'>=></a>"
                         +"</label>"
-                        +"<input type='checkbox' id='c"+data[i].uuid+"' />"
+                        +"<input type='checkbox' id='"+slugify(data[i].channelName)+data[i].uuid+"' />"
                     +"</li>";
             $('#channels').append(li);
             if (data[i].categories.length) {
@@ -31,10 +31,10 @@ $(function () {
         for (var i = 0; i < categories.length; i++) {
             //var li = "<li data-categoryId='"+categories[i].uuid+"'>"+categories[i].name+"</li>";
             var li = "<li class='channel' data-categoryId='"+categories[i].uuid+"'>"
-                        +"<label for='c"+categories[i].uuid+"' class='menu_label'>"+categories[i].name
+                        +"<label for='"+slugify(categories[i].name)+categories[i].uuid+"' class='menu_label'>"+categories[i].name
                         +"<a class='call-api' href='/approachone/rest/category/?uuid="+categories[i].uuid+"'>=></a>"
                         +"</label>"
-                        +"<input type='checkbox' id='c"+categories[i].uuid+"' />"
+                        +"<input type='checkbox' id='"+slugify(categories[i].name)+categories[i].uuid+"' />"
                     +"</li>";
             ul.append(li);
             if (categories[i].children.length) {
@@ -61,5 +61,14 @@ $(function () {
             $('#api-url').css('display', 'block');
         });
     });
+
+    function slugify(text) {
+        return text.toString().toLowerCase()
+            .replace(/\s+/g, '-')           // Replace spaces with -
+            .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+            .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+            .replace(/^-+/, '')             // Trim - from start of text
+            .replace(/-+$/, '');            // Trim - from end of text
+    }
 
 });

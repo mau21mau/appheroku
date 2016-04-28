@@ -85,7 +85,6 @@ span.docs a {
 p.tip {
     color: #D46A6A;
     font-style: italic;
-    font-size: small;
 }
 
 #content-wrapper {
@@ -104,7 +103,6 @@ p.tip {
 }
 
 #tree-wrapper {
-    font-size: small;
     padding: 2%;
     width: 25%;
 }
@@ -117,7 +115,6 @@ p.tip {
 #api-response-wrapper pre {
     padding: 4px;
     word-wrap: break-word;
-    font-size: small;
     font-weight: 300;
     font-family: 'Ubuntu', sans-serif;
 }
