@@ -1,1 +1,1 @@
-web: gunicorn appheroku.appheroku.wsgi --log-file -
+web: gunicorn appheroku.wsgi --log-file -
