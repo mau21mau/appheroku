@@ -1,1 +1,1 @@
-web: gunicorn appheroku.appheroku.wsgi --log-file -
+web: gunicorn appheroku.appheroku.wsgi:application --env DJANGO_SETTINGS_MODULE='appheroku.settings.production'
