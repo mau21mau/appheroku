@@ -1,0 +1,53 @@
+# Project local settings
+appheroku/appheroku/staticfiles/*
+appheroku/appheroku/staticfiles/!.gitkeep
+
+# Python bytecode:
+*.py[co]
+
+# Packaging files:
+*.egg*
+
+.DS_Store
+
+# Sphinx docs:
+build
+
+# SQLite3 database files:
+*.db
+
+# Logs:
+*.log
+.env
+tmp
+
+# Eclipse
+.project
+.pydevproject
+.settings
+
+# Linux Editors
+*~
+.idea
+*.tmproj
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+*.swp
+*.swo
+
+# Mac
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*.fuse*
+
