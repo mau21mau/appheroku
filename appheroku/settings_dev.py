@@ -1,5 +1,4 @@
-from appheroku.settings.base import *
-
+from settings import *
 
 DEBUG = True
 DATABASES = {
