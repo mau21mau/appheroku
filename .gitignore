@@ -1,6 +1,6 @@
 # Project local settings
-appheroku/appheroku/staticfiles/*
-appheroku/appheroku/staticfiles/!.gitkeep
+appheroku/staticfiles/*
+appheroku/staticfiles/!.gitkeep
 
 # Python bytecode:
 *.py[co]
