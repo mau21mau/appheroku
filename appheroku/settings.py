@@ -1,7 +1,9 @@
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 DEBUG = False
 
 # Quick-start development settings - unsuitable for production
@@ -53,7 +55,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'appheroku/templates'),
+            os.path.join(PROJECT_ROOT, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -106,8 +108,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'appheroku/staticfiles')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "appheroku/static"),
+    os.path.join(PROJECT_ROOT, "static"),
 ]
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
