@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-DEBUG = False
+DEBUG = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -23,7 +23,7 @@ DATABASES = {
         'USER': 'ksqgiwzajyekoj',
         'NAME': 'd8bkb7e81gqs8',
         'PASSWORD': 'hp2EPz5-pZUR47ZnWbm0zY2EDU',
-        'HOST': 'ec2-54-204-41-70.compute-1.amazonaws.com',
+        'HOST': 'https://ec2-54-204-41-70.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
