@@ -23,7 +23,7 @@ DATABASES = {
         'USER': 'ksqgiwzajyekoj',
         'NAME': 'd8bkb7e81gqs8',
         'PASSWORD': 'hp2EPz5-pZUR47ZnWbm0zY2EDU',
-        'HOST': 'https://ec2-54-204-41-70.compute-1.amazonaws.com',
+        'HOST': 'ec2-54-204-41-70.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
